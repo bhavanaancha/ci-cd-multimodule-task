@@ -102,46 +102,26 @@
 	</dependencies>
 
 	<build>
-
-		<plugins>
-
-			<plugin>
-
-				<groupId>org.springframework.boot</groupId>
-
-				<artifactId>spring-boot-maven-plugin</artifactId>
-
-				<configuration>
-
-					<image>
-
-						<name>${project.groupId}/gym-application:${project.version}</name>
-
-					</image>
-
-				</configuration>
-
-				<executions>
-
-					<execution>
-
-						<phase>install</phase>
-
-						<goals>
-
-							<goal>build-image</goal>
-
-						</goals>
-
-					</execution>
-
-				</executions>
-
-			</plugin>
-
-		</plugins>
-
-	</build>
+<plugins>
+<plugin>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-maven-plugin</artifactId>
+<configuration>
+<image>
+<name>${project.groupId}/service-name:${project.version}</name>
+</image>
+</configuration>
+<executions>
+<execution>
+<phase>install</phase>
+<goals>
+<goal>build-image</goal>
+</goals>
+</execution>
+</executions>
+</plugin>
+</plugins>
+</build>
 
 
 </project>
